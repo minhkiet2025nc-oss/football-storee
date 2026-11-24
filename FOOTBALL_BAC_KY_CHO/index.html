@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTBALL STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FOOTBALL STORE</h1>
+        <nav>
+            <a href="#home">Trang chủ</a>
+            <a href="#products">Sản phẩm</a>
+            <a href="#about">Giới thiệu</a>
+        </nav>
+        <div class="header-actions">
+            <button id="accountButton">Đăng nhập / Đăng ký</button>
+            <button id="showCart">Giỏ hàng (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+
+    <section class="banner" id="home">
+        <h2>CHÀO MỪNG ĐẾN VỚI FOOTBALL STORE</h2>
+        <p>Cửa hàng giày bóng đá dành cho những người đam mê sân cỏ.</p>
+        <a href="#products">Xem sản phẩm</a>
+    </section>
+
+    <main>
+        <section id="products">
+            <h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
+
+            <div class="filters">
+                <label for="brandFilter">Thương hiệu:</label>
+                <select id="brandFilter">
+                    <option value="all">Tất cả</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Puma">Puma</option>
+                </select>
+
+                <label for="typeFilter">Loại sân:</label>
+                <select id="typeFilter">
+                    <option value="all">Tất cả</option>
+                    <option value="FG">FG</option>
+                    <option value="AG">AG</option>
+                    <option value="TF">TF</option>
+                </select>
+            </div>
+
+            <div id="productList" class="product-list"></div>
+        </section>
+
+        <section id="about">
+            <h2>GIỚI THIỆU</h2>
+            <p>FOOTBALL STORE cung cấp các mẫu giày bóng đá dành cho người yêu thích thể thao.
+               Hãy chọn cho mình một đôi giày phù hợp để tự tin trên sân cỏ!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 FOOTBALL STORE</p>
+    </footer>
+
+    <div id="authBox" class="auth-box">
+        <div class="auth-content">
+            <button id="closeAuth" class="close-button">Đóng ✕</button>
+            <h2 id="authTitle">ĐĂNG NHẬP</h2>
+            <div id="authMessage" class="auth-message"></div>
+            <form id="authForm">
+                <label for="authName">Họ và tên</label>
+                <input id="authName" type="text" placeholder="Nhập họ tên" autocomplete="name">
+                <label for="authEmail">Email</label>
+                <input id="authEmail" type="email" placeholder="example@gmail.com" required autocomplete="email">
+                <label for="authPassword">Mật khẩu</label>
+                <input id="authPassword" type="password" placeholder="Ít nhất 6 ký tự" required minlength="6" autocomplete="current-password">
+                <button id="authSubmit" type="submit">Đăng nhập</button>
+            </form>
+            <p id="authSwitch">Chưa có tài khoản? <button type="button" id="switchAuth" class="text-button">Đăng ký ngay</button></p>
+            <p class="note">Tài khoản và tiền demo chỉ lưu trên trình duyệt hiện tại, phục vụ bài tập. Không dùng mật khẩu thật.</p>
+        </div>
+    </div>
+
+    <div id="cartBox" class="cart-box">
+        <div class="cart-content">
+            <button id="closeCart" class="close-button">Đóng ✕</button>
+            <h2>GIỎ HÀNG</h2>
+            <div id="cartItems"></div>
+            <h3>Tổng tiền: <span id="totalPrice">0₫</span></h3>
+            <button id="checkout">Đặt hàng</button>
+            <p class="note">Thanh toán demo bằng số dư ví ảo, không thu tiền thật.</p>
+        </div>
+    </div>
+
+    <div id="detailBox" class="detail-box">
+        <div class="detail-content">
+            <button id="closeDetail" class="close-button">Đóng ✕</button>
+            <div id="detailInfo"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
